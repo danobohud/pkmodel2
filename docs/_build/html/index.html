@@ -36,12 +36,15 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="pkmodel2.definitions.Compartment">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">Compartment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transrate_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.Compartment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Compartment describes an individual compartment in either model type.</p>
-<p>:param
-volume: Volume of compartment
-:type volume: float
-:param transrate: Transition rate out of a given compartment
-:type transrate: float</p>
+<dd><p>Compartment describes an individual compartment in either model type.
+:param #:
+:type #: param volume: Volume of compartment
+:param #:
+:type #: type volume: float
+:param #:
+:type #: param transrate: Transition rate out of a given compartment
+:param #:
+:type #: type transrate: float</p>
 </dd></dl>
 
 <dl class="py function">
@@ -85,18 +88,18 @@ volume: Volume of compartment
 <dl class="py function">
 <dt class="sig sig-object py" id="pkmodel2.definitions.write_solution_file">
 <span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">write_solution_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.write_solution_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Puts the scipy solution into a data file for reading by the visualiser.</p>
-<p># :param solution: solution from scipy solve_ivp().
-# :type solution: bunch
-# :param model: type of model, one of ‘sc’ or ‘ib’ as defined earlier by
-#  user.
-# :type model: string
-# :param timestamp: time at which the solver was run, used to identify a
-#  given run.
-# :type timestamp:  string</p>
-<p># :return solutionmat: Contains timeseries data, and solutions for each
-# compartment.
-# :type solutionmat: Numpy array</p>
+<dd><p>Puts the scipy solution into a data file for reading by the visualiser.
+:param solution: solution from scipy solve_ivp().
+:type solution: bunch
+:param model: type of model, one of ‘sc’ or ‘ib’ as defined earlier by
+user.
+:type model: string
+:param timestamp: time at which the solver was run, used to identify a
+given run.
+:type timestamp:  string
+:return solutionmat: Contains timeseries data, and solutions for each
+compartment.
+:type solutionmat: Numpy array</p>
 </dd></dl>
 
 <div class="toctree-wrapper compound">

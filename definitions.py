@@ -3,12 +3,13 @@ import numpy as np
 
 class Compartment():
     """Compartment describes an individual compartment in either model type.
+Parameters
+----------
+    # :param volume: Volume of compartment
+    # :type volume: float
+    # :param transrate: Transition rate out of a given compartment
+    # :type transrate: float
 
-    :param volume: Volume of compartment
-    :type volume: float
-    ...
-    :param transrate: Transition rate out of a given compartment
-    :type transrate: float
     """
 
     def __init__(self, volume, transrate_out):
@@ -114,20 +115,18 @@ def form_rhs_sc(subcmpt, maincmpt, peripherals, dose, clearance):
 
 def write_solution_file(solution, model, timestamp):
     """Puts the scipy solution into a data file for reading by the visualiser.
+:param solution: solution from scipy solve_ivp().
+:type solution: bunch
+:param model: type of model, one of 'sc' or 'ib' as defined earlier by
+user.
+:type model: string
+:param timestamp: time at which the solver was run, used to identify a
+given run.
+:type timestamp:  string
+:return solutionmat: Contains timeseries data, and solutions for each
+compartment.
+:type solutionmat: Numpy array
 
-    :param solution: solution from scipy solve_ivp().
-    :type solution: bunch
-    :param model: type of model, one of 'sc' or 'ib' as defined earlier by
-     user.
-    :type model: string
-    :param timestamp: time at which the solver was run, used to identify a
-     given run.
-    :type timestamp:  string
-
-    :return solutionmat: Contains timeseries data, and solutions for each
-    compartment.
-    :type solutionmat: Numpy array
-    
     """
 
     if model == 'sc':
