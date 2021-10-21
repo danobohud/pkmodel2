@@ -5,51 +5,67 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import json
 
-
 input = [['./param_2.json', './test_data_sc.csv'], ['./param_1.json', './test_data_ib.csv']] #This is where the JSON output would go -- Working on this sti
 
-input_json = input[0][0]
-with open(input_json, 'r') as JSON:
-    input_dict = json.load(JSON)
-compartments = ['Sub', 'Main']
-for i in input_dict['compartments']:
-    if i[2] not in ['Sub', 'Main']:
-        compartments.append(i[2])
+def json_file_to_dictionary(json_file):
+    with open(json_file, 'r') as JSON:
+        input_dict = json.load(JSON)
+    return input_dict
 
-def process_data(csv): #Input must include compartments list 
+def csv_file_to_panda_data_frame(csv_file): #Input must include compartments list 
     """This function takes a csv file and creates a labelled panda dataframe"""
-    df = pd.read_csv(csv, header=None)
-    column_count = len(df.columns)
+    df = pd.read_csv(csv_file, header=None)
+    # column_count = len(df.columns)
     colnames = ['Time']
-    colnames.extend(compartments)  
+    colnames.extend(define_compartment_names(input))  
     df.columns = colnames
     return df
 
-# # def plot_model():
-fig, axs = plt.subplots(len(compartments), 1)
-for i in input:
-    input_json = i[0]
-    csv = i[1]
-    with open(input_json, 'r') as JSON:
+def define_compartment_names(input):
+    '''
+    This function reads the first JSON file in the 'list of lists' and returns 
+    the number of compartments that there will be in this comparison.
+    '''
+    json_file = input[0][0]
+    with open(json_file, 'r') as JSON:
         input_dict = json.load(JSON)
     compartments = ['Sub', 'Main']
     for i in input_dict['compartments']:
         if i[2] not in ['Sub', 'Main']:
             compartments.append(i[2])
+    return compartments
 
-    models = input_dict['model_type']
-    if len(input) > 1:
-        model = models
-    else:
-        model = models[i]
+def define_model_names(input):
+    models = []
+    for i in input:
+        models.append(json_file_to_dictionary(i[0])['model_type']) #Is there a better way to differentiate models (type and also parameters)
+    return models
 
-    df = process_data('./test_data_{}.csv'.format(model))
-    for j in range(len(compartments)):
-        compartment = compartments[j]
-        axs[j].plot(df['Time'].tolist(), df['{}'.format(compartment)].tolist())
-        axs[j].set_title("{} Compartment".format(compartment))
-plt.legend(models)
-plt.tight_layout()
-plt.show()
+def plot_model(input):
+    compartments = define_compartment_names(input)
+    models = define_model_names(input)
+
+    fig, axs = plt.subplots(len(compartments), 1)
+    for i in input:
+        # json_file = i[0]
+        csv_file = i[1] 
+
+        # if len(input) == 1:
+        #     model = models
+        # else:
+        #     model = models[i]
+
+        df = csv_file_to_panda_data_frame(csv_file)
+
+        for j in range(len(compartments)):
+            compartment = compartments[j]
+            axs[j].plot(df['Time'].tolist(), df['{}'.format(compartment)].tolist())
+            axs[j].set_title("{} Compartment".format(compartment))
+
+    plt.legend(models)
+    plt.tight_layout()
+    plt.show()
     # fig.savefig()
+
+plot_model(input)
 
