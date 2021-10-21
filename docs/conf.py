@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'PK proj'
-copyright = '2021, todo'
-author = 'todo'
+project = 'PK Project'
+copyright = '2021, Amit Halkhoree, Cameron Anderson, Dan Hudson, Ishaan Kapoor, Joseph Pollacco, Samuel Johnson'
+author = 'Amit Halkhoree, Cameron Anderson, Dan Hudson, Ishaan Kapoor, Joseph Pollacco, Samuel Johnson'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'
