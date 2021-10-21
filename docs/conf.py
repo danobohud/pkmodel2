@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'PK Project'
-copyright = '2021, To Do'
-author = 'To Do'
+project = 'PK proj'
+copyright = '2021, todo'
+author = 'todo'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1.0'
