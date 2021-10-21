@@ -1,6 +1,6 @@
 Welcome to pk project's documentation!
 ======================================
-.. automodule:: pkmodel2-main.solver
+.. automodule:: pkmodel2.definitions
     :members:
 
 .. toctree::

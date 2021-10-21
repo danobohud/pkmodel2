@@ -31,8 +31,77 @@
 
           <div class="body" role="main">
             
-  <section id="welcome-to-pk-project-s-documentation">
-<h1>Welcome to pk project’s documentation!<a class="headerlink" href="#welcome-to-pk-project-s-documentation" title="Permalink to this headline">¶</a></h1>
+  <section id="module-pkmodel2.definitions">
+<span id="welcome-to-pk-project-s-documentation"></span><h1>Welcome to pk project’s documentation!<a class="headerlink" href="#module-pkmodel2.definitions" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkmodel2.definitions.Compartment">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">Compartment</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">volume</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">transrate_out</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.Compartment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Compartment describes an individual compartment in either model type.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>volume</strong> (<em>float</em>) – Volume of compartment</p></li>
+<li><p><strong>transrate</strong> (<em>float</em>) – Transition rate out of a given compartment</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkmodel2.definitions.form_rhs_ib">
+<span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">form_rhs_ib</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">maincmpt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peripherals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.form_rhs_ib" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function factory to form the right-hand side of the PK ODE for IB model.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>#</strong> (<em>return rhs_ib: RHS of the PK ODE for the IB model</em><em>, </em><em>taking parameters t</em>) – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>#</strong> – </p></li>
+<li><p><strong>(</strong><strong>floats</strong><strong>)</strong><strong></strong> (<em>#</em><em> (</em><em>time</em><em>) </em><em>and an N-dimensional vector of q</em>) – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkmodel2.definitions.form_rhs_sc">
+<span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">form_rhs_sc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">subcmpt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">maincmpt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">peripherals</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dose</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">clearance</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.form_rhs_sc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function factory to form the right-hand side of the PK ODE for IB model.
+:param subcmpt: Object corresponding to the subcutaneous compartment
+:type subcmpt: Compartment object
+:param maincmpt: Object corresponding to the main compartment
+:type maincmpt: Compartment object
+:param peripherals: List containing each peripheral compartment object
+:type peripherals: list, each listem item is Compartment.
+:param dose: Function, one argument (time), describes dosing protocol.
+:type dose: Function
+:param clearance: Clearance rate from the main compartment.
+:type clearance: float</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkmodel2.definitions.write_solution_file">
+<span class="sig-prename descclassname"><span class="pre">pkmodel2.definitions.</span></span><span class="sig-name descname"><span class="pre">write_solution_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solution</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">model</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timestamp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkmodel2.definitions.write_solution_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Puts the scipy solution into a data file for reading by the visualiser.</p>
+<p># :param solution: solution from scipy solve_ivp().
+# :type solution: bunch
+# :param model: type of model, one of ‘sc’ or ‘ib’ as defined earlier by
+#  user.
+# :type model: string
+# :param timestamp: time at which the solver was run, used to identify a
+#  given run.
+# :type timestamp:  string</p>
+<p># :return solutionmat: Contains timeseries data, and solutions for each
+# compartment.
+# :type solutionmat: Numpy array</p>
+</dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 <p>Hello World!</p>
