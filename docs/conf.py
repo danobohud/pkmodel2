@@ -18,11 +18,11 @@
 # -- Project information -----------------------------------------------------
 
 project = 'PK Project'
-copyright = '2021, To Do Later'
-author = 'To Do Later'
+copyright = '2021, Todo'
+author = 'Todo'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1.2'
+release = '0.1.0'
 
 
 # -- General configuration ---------------------------------------------------
@@ -52,4 +52,4 @@ html_theme = 'alabaster'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = []
+html_static_path = ['_static']
