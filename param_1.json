@@ -1,0 +1,1 @@
+{"model_type": "ib", "compound": "paracetamol", "dose": "1 ", "len_assay": "1", "len_interval": "0.5", "clearance": "1", "compartments": [["1", "1", "Main"], ["3", "4", "upper-lung"], ["5", "6", "lower-lung"]], "vis": "y"}

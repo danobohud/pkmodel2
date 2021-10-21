@@ -5,16 +5,16 @@ from matplotlib import pyplot as plt
 import pandas as pd
 import json
 
-with open('./param.json', 'r') as JSON:
+
+input = [['./param_2.json', './test_data_sc.csv'], ['./param_1.json', './test_data_ib.csv']] #This is where the JSON output would go -- Working on this sti
+
+input_json = input[0][0]
+with open(input_json, 'r') as JSON:
     input_dict = json.load(JSON)
-print(input_dict)
 compartments = ['Sub', 'Main']
 for i in input_dict['compartments']:
     if i[2] not in ['Sub', 'Main']:
         compartments.append(i[2])
-
-models = input_dict['model_type']
-print(models)
 
 def process_data(csv): #Input must include compartments list 
     """This function takes a csv file and creates a labelled panda dataframe"""
@@ -25,14 +25,24 @@ def process_data(csv): #Input must include compartments list
     df.columns = colnames
     return df
 
-# def plot_model():
+# # def plot_model():
 fig, axs = plt.subplots(len(compartments), 1)
-for i in range(len(models)):
-    #Define which model csv you want --> timestamp?
-    if len(models) > 1:
+for i in input:
+    input_json = i[0]
+    csv = i[1]
+    with open(input_json, 'r') as JSON:
+        input_dict = json.load(JSON)
+    compartments = ['Sub', 'Main']
+    for i in input_dict['compartments']:
+        if i[2] not in ['Sub', 'Main']:
+            compartments.append(i[2])
+
+    models = input_dict['model_type']
+    if len(input) > 1:
         model = models
     else:
         model = models[i]
+
     df = process_data('./test_data_{}.csv'.format(model))
     for j in range(len(compartments)):
         compartment = compartments[j]
@@ -41,5 +51,5 @@ for i in range(len(models)):
 plt.legend(models)
 plt.tight_layout()
 plt.show()
-#     fig.savefig()
+    # fig.savefig()
 
