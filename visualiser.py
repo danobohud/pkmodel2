@@ -1,5 +1,7 @@
 # The script uses the solutions generated from the solver to generate plots to view the data
 # Plots results for different models in seperate compartments
+# To implement the script use plot_model(input) where input is a list of lists in the following form:
+# input = [['./param_2.json', './test_data_sc.csv'], ['./param_1.json', './test_data_ib.csv']]
 
 from matplotlib import pyplot as plt
 import pandas as pd
