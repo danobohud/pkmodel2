@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'PK proj'
+project = 'PK Proj'
 copyright = '2021, todo'
 author = 'todo'
 
