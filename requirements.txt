@@ -107,38 +107,7 @@ rope @ file:///tmp/build/80754af9/rope_1623703006312/work
 Rtree @ file:///opt/concourse/worker/volumes/live/18283f9b-719e-45b1-7f3a-937f49358be4/volume/rtree_1618420836397/work
 ruamel-yaml-conda @ file:///opt/concourse/worker/volumes/live/e81cf0fe-611a-498e-6e69-a7320057c1ac/volume/ruamel_yaml_1616016689696/work
 scipy==1.7.1
-sip==4.19.13
-six @ file:///tmp/build/80754af9/six_1623709665295/work
-snowballstemmer @ file:///tmp/build/80754af9/snowballstemmer_1611258885636/work
-sortedcontainers @ file:///tmp/build/80754af9/sortedcontainers_1623949099177/work
-Sphinx @ file:///tmp/build/80754af9/sphinx_1632506123190/work
-sphinxcontrib-applehelp @ file:///home/ktietz/src/ci/sphinxcontrib-applehelp_1611920841464/work
-sphinxcontrib-devhelp @ file:///home/ktietz/src/ci/sphinxcontrib-devhelp_1611920923094/work
-sphinxcontrib-htmlhelp @ file:///tmp/build/80754af9/sphinxcontrib-htmlhelp_1623945626792/work
-sphinxcontrib-jsmath @ file:///home/ktietz/src/ci/sphinxcontrib-jsmath_1611920942228/work
-sphinxcontrib-qthelp @ file:///home/ktietz/src/ci/sphinxcontrib-qthelp_1611921055322/work
-sphinxcontrib-serializinghtml @ file:///tmp/build/80754af9/sphinxcontrib-serializinghtml_1624451540180/work
-spyder @ file:///opt/concourse/worker/volumes/live/ded4bac2-5ccc-4682-7eaf-ce75d06dea84/volume/spyder_1625814695369/work
-spyder-kernels @ file:///opt/concourse/worker/volumes/live/a092f005-1d67-44ea-5326-c379ef53b325/volume/spyder-kernels_1625671056326/work
-testpath @ file:///tmp/build/80754af9/testpath_1624638946665/work
-text-unidecode @ file:///Users/ktietz/demo/mc3/conda-bld/text-unidecode_1629401354553/work
-textdistance @ file:///tmp/build/80754af9/textdistance_1612461398012/work
-three-merge @ file:///tmp/build/80754af9/three-merge_1607553261110/work
-tinycss @ file:///tmp/build/80754af9/tinycss_1617713798712/work
-toml @ file:///tmp/build/80754af9/toml_1616166611790/work
-tornado @ file:///opt/concourse/worker/volumes/live/2c1a63a2-006b-48ee-56b9-0cfe8b4927f9/volume/tornado_1606942321278/work
-tqdm @ file:///tmp/build/80754af9/tqdm_1625563689033/work
-traitlets @ file:///tmp/build/80754af9/traitlets_1632522747050/work
-typed-ast @ file:///opt/concourse/worker/volumes/live/c2210c24-bb2d-4474-77f5-1bc9bf1cb79f/volume/typed-ast_1624953683856/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1631814937681/work
-ujson @ file:///opt/concourse/worker/volumes/live/258fa87e-ec76-445c-5f9c-fc9523993cd7/volume/ujson_1611259511951/work
-Unidecode @ file:///tmp/build/80754af9/unidecode_1614712377438/work
-urllib3 @ file:///tmp/build/80754af9/urllib3_1625084269274/work
-watchdog @ file:///opt/concourse/worker/volumes/live/3aa0e7d9-c795-4854-41fd-f0b2492c886a/volume/watchdog_1624955010200/work
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
-webencodings==0.5.1
-whichcraft @ file:///tmp/build/80754af9/whichcraft_1617751293875/work
-wrapt @ file:///opt/concourse/worker/volumes/live/1381ca3b-f984-4f5c-4f46-a67ca4eeffa5/volume/wrapt_1607574524589/work
-wurlitzer @ file:///opt/concourse/worker/volumes/live/f0d9880a-118b-4ba3-7b92-3c5bb0f6c00b/volume/wurlitzer_1626947802781/work
-yapf @ file:///tmp/build/80754af9/yapf_1615749224965/work
-zipp @ file:///tmp/build/80754af9/zipp_1625570634446/work
+six==1.16.0
+toml==0.10.2
+urllib3==1.26.7
+
