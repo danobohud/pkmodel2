@@ -5,6 +5,7 @@
 # Pharmacokinetic Modelling Group Project
 
 A PK modelling function for analysis of solute dynamics over time
+https://software-engineering-bbsrc-group-6.github.io/PK_modelling/
 
 ## Authors
 Amit Halkhoree - amit.halkhoree@dtc.ox.ac.uk \
