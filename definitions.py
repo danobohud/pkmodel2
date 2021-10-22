@@ -5,10 +5,10 @@ class Compartment():
     """Compartment describes an individual compartment in either model type.
 Parameters
 ----------
-    # :param volume: Volume of compartment
-    # :type volume: float
-    # :param transrate: Transition rate out of a given compartment
-    # :type transrate: float
+# :param volume: Volume of compartment
+# :type volume: float
+# :param transrate: Transition rate out of a given compartment
+# :type transrate: float
 
     """
 
