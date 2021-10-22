@@ -2,17 +2,17 @@ import numpy as np
 
 
 class Compartment():
-    """Compartment describes an individual compartment in either model type.
+    """Compartment describes an individual compartment in either model type
 
+    :param volume: Volume of compartment
+    :type volume: float
+    :param transrate: Transition rate out of a given compartment
+    :type transrate: float
+    ...
+    :return: Intialised instance
+    :rtype: class object
+"""
 
-    Parameters
-    ----------
-    # :param volume: Volume of compartment
-    # :type volume: float
-    # :param transrate: Transition rate out of a given compartmen
-    # :type transrate: float
-
-    """
 
     def __init__(self, volume, transrate_out):
         self.volume = volume
